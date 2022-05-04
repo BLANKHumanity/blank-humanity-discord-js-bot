@@ -36,6 +36,6 @@ client.on('message', message => {
 });
 
 // Log the bot in using the token provided in the config file
-client.login(client.botConfig.token).catch((err) => {
+client.login(process.env.TOKEN).catch((err) => {
     console.log(`Failed to authenticate with Discord network: "${err.message}"`);
 });
